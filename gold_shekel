@@ -1,0 +1,20 @@
+import random
+
+
+count = 0
+num_of_gold_shekels_bhiskar_have = 100
+num_given_to_bhiskar = random.randint(2,100)
+print('The number given to Bhiskar is:',num_given_to_bhiskar)
+
+while num_given_to_bhiskar != 1:
+ if num_given_to_bhiskar%2 == 0:
+  num_given_to_bhiskar = num_given_to_bhiskar/2
+ else:
+  num_given_to_bhiskar = num_given_to_bhiskar + (num_given_to_bhiskar*2) + 1
+ count += 1
+
+user_input = int(input("What do you think the Rishakh knows the number upto:  "))
+if user_input <= count:
+ print(f'Rishakh will take {user_input} gold shekels')
+else:
+ print(f'Rishakh will take {count} gold shekels')
